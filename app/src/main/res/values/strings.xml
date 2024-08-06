@@ -22,11 +22,12 @@
     <string name="create_account">Create Account</string>
     <string name="create_an_account">Create an account</string>
     <string name="account">Account</string>
-    <string name="home_fragment">Home fragment</string>
-    <string name="setting_fragment">Setting fragment</string>
-    <string name="admin_fragment">Admin fragment</string>
+    <string name="home_fragment">Home Page</string>
+    <string name="setting_fragment">Settings Page</string>
+    <string name="admin_fragment">Admin Page</string>
     <string name="logout_msg">Are you sure you want to logout?</string>
     <string name="logout_yes">Yes</string>
     <string name="logout_no">No</string>
     <string name="no_internet">Please check the Internet connectivity</string>
+    <string name="title_activity_main2">MainActivity2</string>
 </resources>

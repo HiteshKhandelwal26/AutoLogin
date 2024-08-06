@@ -30,7 +30,6 @@ class MyModule {
         return OkHttpClient().newBuilder().addInterceptor(httpLoggingInterceptor).build()
     }
 
-
     @Provides
     @Singleton
     fun getRetrofitInstance(okHttpClient: OkHttpClient): APIService {
