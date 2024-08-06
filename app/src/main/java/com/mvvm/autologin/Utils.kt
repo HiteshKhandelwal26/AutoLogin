@@ -12,18 +12,17 @@ import com.mvvm.postquery.R
 object Utils {
 
     private lateinit var myValue: String
-    fun validateEmailPassword(email: String, password: String): String {
+    fun validateEmailPassword(email: String, password: String, context: Context): String {
         myValue = if (email.isEmpty() && password.isEmpty()) {
-            "Enter email and password"
+            context.getString(R.string.enter_email_pwd)
         } else if (email.isEmpty()) {
-            "Enter email "
-
+            context.getString(R.string.enter_email)
         } else if (password.isEmpty()) {
-            "Enter password "
-        } else if (!isUserNameValid(email)) {
-            "Enter valid email"
+            context.getString(R.string.enter_pwd)
+        } else if (!isValidEmail(email)) {
+            context.getString(R.string.enter_valid_email)
         } else if (!isPasswordValid(password)) {
-            "Password should be more than 5"
+            context.getString(R.string.enter_valid_password)
         } else {
             ""
         }
@@ -31,12 +30,8 @@ object Utils {
     }
 
     // A placeholder username validation check
-    private fun isUserNameValid(username: String): Boolean {
-        return if (username.contains('@')) {
-            Patterns.EMAIL_ADDRESS.matcher(username).matches()
-        } else {
-            username.isNotBlank()
-        }
+    private fun isValidEmail(email: String): Boolean {
+        return Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
 
     // A placeholder password validation check

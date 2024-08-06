@@ -13,7 +13,6 @@
     <string name="action_sign_in_short">Sign in</string>
     <string name="welcome">"Welcome !"</string>
     <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="sign_in_to_get_started">Sign in to get started</string>
     <string name="forgot_password">Forgot Password?</string>
@@ -28,6 +27,11 @@
     <string name="logout_msg">Are you sure you want to logout?</string>
     <string name="logout_yes">Yes</string>
     <string name="logout_no">No</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_email_pwd">Enter email and password</string>
+    <string name="enter_pwd">Enter Password</string>
+    <string name="enter_valid_email">Enter valid email</string>
+    <string name="enter_valid_password">Password must be >5 characters</string>
     <string name="no_internet">Please check the Internet connectivity</string>
-    <string name="title_activity_main2">MainActivity2</string>
+
 </resources>

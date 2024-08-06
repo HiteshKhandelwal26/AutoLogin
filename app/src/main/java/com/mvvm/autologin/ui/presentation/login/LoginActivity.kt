@@ -28,11 +28,12 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
     }
 
-    fun login(v: View) {
+    fun login() {
         showToast(
             Utils.validateEmailPassword(
                 binding.email.text.toString(),
-                binding.password.text.toString()
+                binding.password.text.toString(),
+                this
             )
         )
         if (Utils.isAllValidated()) {
@@ -87,7 +88,7 @@ class LoginActivity : AppCompatActivity() {
         observerData()
     }
 
-    fun createAccountOnClick(view: View) {
+    fun createAccountOnClick() {
         startActivity(Intent(this, RegisterActivity::class.java))
     }
 
@@ -112,7 +113,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun showToast(msg: String) {
-        val snackbar = Snackbar.make(binding.loginLayout, msg, Snackbar.LENGTH_LONG);
+        val snackbar = Snackbar.make(binding.loginLayout, msg, Snackbar.LENGTH_LONG)
         snackbar.show()
     }
 }
