@@ -8,7 +8,6 @@ import androidx.lifecycle.viewModelScope
 import com.mvvm.autologin.data.model.BaseResponse
 import com.mvvm.autologin.data.model.Data
 import com.mvvm.autologin.data.model.LoginDummyResponse
-import com.mvvm.autologin.data.model.LoginRequest
 import com.mvvm.autologin.data.model.LoginResponse
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
@@ -33,13 +32,13 @@ class LoginViewModel @Inject constructor(application: Application, private val r
         loginResult.value = BaseResponse.Loading()
         viewModelScope.launch {
             try {
+                    //TODO - temporary commenting the below condition as the API is not having any response.
+                    //TODO - Therefore loading the dummy response for time being for Login FLOW
+                    /*
                     val loginRequest = LoginRequest(
                         password = pwd,
                         email = email
                     )
-                    //TODO - temporary commenting the below condition as the API is not having any response.
-                    //TODO - Therefore loading the dummy response for time being for Login FLOW
-                    /*
                     val response = repository.loginRequest(loginRequest = loginRequest)
                     if (response.code() == 200) {
                         loginResult.value = BaseResponse.Success(response.body())
@@ -91,25 +90,4 @@ class LoginViewModel @Inject constructor(application: Application, private val r
             stringBuilder.toString()
         }
     }
-
-    /* fun loginButton() {
-         if (inputUsername.value == null || inputPassword.value == null) {
-             _errorToast.value = true
-         } else {
-             uiScope.launch {
-                 val usersNames = repository.loginRequest(inputUsername.value!!)
-                 if (usersNames != null) {
-                     if (usersNames.passwrd == inputPassword.value) {
-                         inputUsername.value = null
-                         inputPassword.value = null
-                         _navigatetoUserDetails.value = true
-                     } else {
-                         _errorToastInvalidPassword.value = true
-                     }
-                 } else {
-                     _errorToastUsername.value = true
-                 }
-             }
-         }
-     }*/
 }

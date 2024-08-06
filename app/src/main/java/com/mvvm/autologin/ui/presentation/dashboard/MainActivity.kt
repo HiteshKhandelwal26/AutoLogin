@@ -3,9 +3,8 @@ package com.mvvm.autologin.ui.presentation.dashboard
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.mvvm.autologin.R
-import com.mvvm.autologin.databinding.ActivityMyMainBinding
-
+import com.mvvm.postquery.R
+import com.mvvm.postquery.databinding.ActivityMyMainBinding
 
 class MainActivity : AppCompatActivity() {
 

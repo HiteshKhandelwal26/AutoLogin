@@ -7,14 +7,14 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.activity.viewModels
 import com.google.android.material.snackbar.Snackbar
-import com.mvvm.autologin.R
 import com.mvvm.autologin.Utils
 import com.mvvm.autologin.data.SessionManager
 import com.mvvm.autologin.data.model.BaseResponse
 import com.mvvm.autologin.data.model.LoginDummyResponse
-import com.mvvm.autologin.databinding.ActivityLoginBinding
 import com.mvvm.autologin.ui.presentation.dashboard.MainActivity
 import com.mvvm.autologin.ui.presentation.register.RegisterActivity
+import com.mvvm.postquery.R
+import com.mvvm.postquery.databinding.ActivityLoginBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

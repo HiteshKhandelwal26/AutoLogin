@@ -18,7 +18,5 @@ class AdminFragment : Fragment() {
     ): View {
         _binding = FragmentAdminBinding.inflate(inflater, container, false)
         return binding.root
-
     }
-
 }

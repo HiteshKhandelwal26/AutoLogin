@@ -7,24 +7,25 @@ import android.net.NetworkCapabilities
 import android.util.Patterns
 import androidx.fragment.app.FragmentActivity
 import com.mvvm.autologin.data.SessionManager
+import com.mvvm.postquery.R
 
 object Utils {
 
-    lateinit var myValue: String
+    private lateinit var myValue: String
     fun validateEmailPassword(email: String, password: String): String {
-        if (email.isEmpty() && password.isEmpty()) {
-            myValue = "Enter email and password"
+        myValue = if (email.isEmpty() && password.isEmpty()) {
+            "Enter email and password"
         } else if (email.isEmpty()) {
-            myValue = "Enter email "
+            "Enter email "
 
         } else if (password.isEmpty()) {
-            myValue = "Enter password "
+            "Enter password "
         } else if (!isUserNameValid(email)) {
-            myValue = "Enter valid email"
+            "Enter valid email"
         } else if (!isPasswordValid(password)) {
-            myValue = "Password should be more than 5"
+            "Password should be more than 5"
         } else {
-            myValue = ""
+            ""
         }
         return myValue
     }
