@@ -21,7 +21,7 @@
         <activity android:name="com.mvvm.autologin.ui.presentation.login.LoginActivity" />
         <activity android:name="com.mvvm.autologin.ui.presentation.dashboard.MainActivity" />
         <activity
-            android:name="com.mvvm.autologin.ui.SplashActivity"
+            android:name="com.mvvm.autologin.ui.presentation.splash.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

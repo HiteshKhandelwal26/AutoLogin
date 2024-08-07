@@ -14,11 +14,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMyMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        loadFragment(HomeFragment())
+        loadFragment(DashboardFragment())
         binding.bottomNav.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.home -> {
-                    loadFragment(HomeFragment())
+                    loadFragment(DashboardFragment())
                     true
                 }
 

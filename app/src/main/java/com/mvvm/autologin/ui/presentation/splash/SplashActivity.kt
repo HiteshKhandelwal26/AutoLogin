@@ -1,4 +1,4 @@
-package com.mvvm.autologin.ui
+package com.mvvm.autologin.ui.presentation.splash
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,6 +10,7 @@ import com.mvvm.autologin.ui.presentation.login.LoginActivity
 import com.mvvm.postquery.databinding.ActivitySplashBinding
 
 
+@Suppress("DEPRECATION")
 class SplashActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySplashBinding

@@ -2,33 +2,37 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/loginLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mvvm.autologin.ui.presentation.dashboard.HomeFragment">
+    android:id="@+id/dashboardLayout"
+    tools:context="com.mvvm.autologin.ui.presentation.dashboard.DashboardFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
 
     <TextView
-        android:id="@+id/txtUser"
+        android:id="@+id/txt_NoData"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:textSize="40sp"
+        android:text="@string/no_data"
+        android:textSize="30sp"
+        android:visibility="gone"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/logoutButton"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_margin="@dimen/activity_horizontal_margin"
-        android:background="@drawable/btn_bg"
-        android:text="@string/logout"
-        android:textColor="@color/white"
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtUser" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

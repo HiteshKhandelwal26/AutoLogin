@@ -1,15 +1,26 @@
-package com.mvvm.autologin
+package com.mvvm.autologin.ui.utils
 
 import android.app.AlertDialog
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.util.Patterns
+import android.view.View
 import androidx.fragment.app.FragmentActivity
+import com.google.android.material.snackbar.Snackbar
 import com.mvvm.autologin.data.SessionManager
 import com.mvvm.postquery.R
 
 object Utils {
+
+    const val name: String = "name"
+    const val status: String = "status"
+    const val code: String = "code"
+    const val success: String = "success"
+    const val id: String = "id"
+    const val email: String = "email"
+    const val token: String = "token"
+    const val data: String = "data"
 
     private lateinit var myValue: String
     fun validateEmailPassword(email: String, password: String, context: Context): String {
@@ -74,4 +85,17 @@ object Utils {
             else -> false
         }
     }
+}
+
+/*Extension Functions*/
+fun View.showSnackbar(message: String, length: Int = Snackbar.LENGTH_SHORT) {
+    Snackbar.make(this, message, length).show()
+}
+
+fun View.showProgressBar() {
+    this.visibility = View.VISIBLE
+}
+
+fun View.hideProgressBar() {
+    this.visibility = View.GONE
 }

@@ -3,14 +3,15 @@ package com.mvvm.autologin.ui.presentation.login
 import android.content.Intent
 import android.content.Intent.FLAG_ACTIVITY_NO_HISTORY
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.activity.viewModels
-import com.google.android.material.snackbar.Snackbar
-import com.mvvm.autologin.Utils
+import com.mvvm.autologin.ui.utils.Utils
 import com.mvvm.autologin.data.SessionManager
 import com.mvvm.autologin.data.model.BaseResponse
 import com.mvvm.autologin.data.model.LoginDummyResponse
+import com.mvvm.autologin.ui.utils.hideProgressBar
+import com.mvvm.autologin.ui.utils.showProgressBar
+import com.mvvm.autologin.ui.utils.showSnackbar
 import com.mvvm.autologin.ui.presentation.dashboard.MainActivity
 import com.mvvm.autologin.ui.presentation.register.RegisterActivity
 import com.mvvm.postquery.R
@@ -29,7 +30,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun login() {
-        showToast(
+        binding.loginLayout.showSnackbar(
             Utils.validateEmailPassword(
                 binding.email.text.toString(),
                 binding.password.text.toString(),
@@ -38,10 +39,10 @@ class LoginActivity : AppCompatActivity() {
         )
         if (Utils.isAllValidated()) {
             if (Utils.isInternetAvailable(this)) {
-                showLoading()
+                binding.progressBar.showProgressBar()
                 doLogin()
             } else {
-                showToast(getString(R.string.no_internet))
+                binding.loginLayout.showSnackbar(getString(R.string.no_internet))
             }
         }
     }
@@ -53,21 +54,21 @@ class LoginActivity : AppCompatActivity() {
         loginViewModel.dummyResult.observe(this) {
             when (it) {
                 is BaseResponse.Loading -> {
-                    showLoading()
+                    binding.progressBar.showProgressBar()
                 }
 
                 is BaseResponse.Success -> {
-                    stopLoading()
+                    binding.progressBar.hideProgressBar()
                     processLogin(it.data)
                 }
 
                 is BaseResponse.Error -> {
-                    stopLoading()
+                    binding.progressBar.hideProgressBar()
                     processError(it.msg)
                 }
 
                 else -> {
-                    stopLoading()
+                    binding.progressBar.hideProgressBar()
                 }
             }
         }
@@ -82,9 +83,11 @@ class LoginActivity : AppCompatActivity() {
 
 
     private fun doLogin() {
-        val email = binding.email.text.toString()
+        //TODO uncomment the below line when calling the actual login api, and comment the dummy response call
+        /*val email = binding.email.text.toString()
         val pwd = binding.password.text.toString()
-        loginViewModel.loginUser(email = email, pwd = pwd)
+        loginViewModel.loginUser(email = email, pwd = pwd)*/
+        loginViewModel.loginWithDummyResponse()
         observerData()
     }
 
@@ -92,16 +95,8 @@ class LoginActivity : AppCompatActivity() {
         startActivity(Intent(this, RegisterActivity::class.java))
     }
 
-    private fun showLoading() {
-        binding.progressBar.visibility = View.VISIBLE
-    }
-
-    private fun stopLoading() {
-        binding.progressBar.visibility = View.GONE
-    }
-
     private fun processLogin(data: LoginDummyResponse?) {
-        showToast("Success:" + data?.status)
+        binding.loginLayout.showSnackbar("Success:" + data?.status)
         if (!data?.data?.token.isNullOrEmpty()) {
             data?.data?.token?.let { SessionManager.saveAuthToken(this, it) }
             navigateToHome()
@@ -109,11 +104,6 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun processError(msg: String?) {
-        showToast("" + msg)
-    }
-
-    private fun showToast(msg: String) {
-        val snackbar = Snackbar.make(binding.loginLayout, msg, Snackbar.LENGTH_LONG)
-        snackbar.show()
+        binding.loginLayout.showSnackbar("" + msg)
     }
 }
