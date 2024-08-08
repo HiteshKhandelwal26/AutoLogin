@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/adapterLayout"
     android:layout_height="wrap_content"
     android:background="?android:attr/selectableItemBackground"
     android:minHeight="250dp">
@@ -19,7 +20,7 @@
         tools:ignore="ContentDescription" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textViewTitle"
+        android:id="@+id/tv_fName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
@@ -33,7 +34,7 @@
         tools:text="Title" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textViewDescription"
+        android:id="@+id/tv_lName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
@@ -43,11 +44,11 @@
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fName"
         tools:text="Description" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textViewSource"
+        android:id="@+id/tv_email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
@@ -56,7 +57,7 @@
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDescription"
+        app:layout_constraintTop_toBottomOf="@+id/tv_lName"
         tools:text="Source" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.mvvm.autologin.ui.presentation.dashboard
+package com.mvvm.autologin.ui.presentation.home.dashboard
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

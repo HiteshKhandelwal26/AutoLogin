@@ -3,4 +3,5 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="_2dp">2dp</dimen>
+    <dimen name="textview_size">30sp</dimen>
 </resources>

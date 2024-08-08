@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:id="@+id/loginLayout"
     android:layout_height="match_parent"
-    tools:context=".ui.presentation.login.LoginActivity">
+    tools:context="com.mvvm.autologin.ui.presentation.login.LoginActivity">
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -145,11 +145,11 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
             android:onClick="createAccountOnClick"
-            android:paddingLeft="4dp"
+            android:paddingStart="4dp"
             android:paddingTop="4dp"
             android:paddingEnd="4dp"
             android:paddingBottom="5dp"
-            android:text="Create one"
+            android:text="@string/create_one"
             android:textColor="@color/purple_700" />
     </LinearLayout>
 
@@ -161,7 +161,7 @@
         android:layout_marginTop="76dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/btn_bg"
-        android:text="Sign in"
+        android:text="@string/sign_in"
         android:onClick="login"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"

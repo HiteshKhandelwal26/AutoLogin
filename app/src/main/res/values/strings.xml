@@ -33,6 +33,9 @@
     <string name="enter_valid_email">Enter valid email</string>
     <string name="enter_valid_password">Password must be >5 characters</string>
     <string name="no_internet">Please check the Internet connectivity</string>
-    <string name="no_data">Currently, no data available</string>
+    <string name="no_data">No data available</string>
+    <string name="wip">Work in progress</string>
+    <string name="create_one">Create one</string>
+    <string name="sign_in">Sign in</string>
 
 </resources>

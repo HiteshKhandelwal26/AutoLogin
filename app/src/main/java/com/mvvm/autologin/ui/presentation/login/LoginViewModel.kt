@@ -77,7 +77,7 @@ class LoginViewModel @Inject constructor(
                         token = dataDummy.getString(Utils.token)
                     )
                     dummyResult.value =
-                        BaseResponse.Success(data = LoginDummyResponse(code, user, isSuccess))
+                        BaseResponse.Success(mResult  = LoginDummyResponse(code, user, isSuccess))
                 } else {
                     BaseResponse.Error("Error in loading asset file")
                 }

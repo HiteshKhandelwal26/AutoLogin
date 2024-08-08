@@ -19,7 +19,7 @@
         tools:targetApi="31">
         <activity android:name="com.mvvm.autologin.ui.presentation.register.RegisterActivity" />
         <activity android:name="com.mvvm.autologin.ui.presentation.login.LoginActivity" />
-        <activity android:name="com.mvvm.autologin.ui.presentation.dashboard.MainActivity" />
+        <activity android:name="com.mvvm.autologin.ui.presentation.home.MainActivity" />
         <activity
             android:name="com.mvvm.autologin.ui.presentation.splash.SplashActivity"
             android:exported="true">

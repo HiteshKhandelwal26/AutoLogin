@@ -1,4 +1,4 @@
-package com.mvvm.autologin.ui.presentation.dashboard
+package com.mvvm.autologin.ui.presentation.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

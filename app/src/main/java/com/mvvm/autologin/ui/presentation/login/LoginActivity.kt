@@ -3,6 +3,7 @@ package com.mvvm.autologin.ui.presentation.login
 import android.content.Intent
 import android.content.Intent.FLAG_ACTIVITY_NO_HISTORY
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.activity.viewModels
 import com.mvvm.autologin.ui.utils.Utils
@@ -12,7 +13,7 @@ import com.mvvm.autologin.data.model.LoginDummyResponse
 import com.mvvm.autologin.ui.utils.hideProgressBar
 import com.mvvm.autologin.ui.utils.showProgressBar
 import com.mvvm.autologin.ui.utils.showSnackbar
-import com.mvvm.autologin.ui.presentation.dashboard.MainActivity
+import com.mvvm.autologin.ui.presentation.home.MainActivity
 import com.mvvm.autologin.ui.presentation.register.RegisterActivity
 import com.mvvm.postquery.R
 import com.mvvm.postquery.databinding.ActivityLoginBinding
@@ -29,7 +30,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
     }
 
-    fun login() {
+    fun login(v: View) {
         binding.loginLayout.showSnackbar(
             Utils.validateEmailPassword(
                 binding.email.text.toString(),
@@ -59,7 +60,7 @@ class LoginActivity : AppCompatActivity() {
 
                 is BaseResponse.Success -> {
                     binding.progressBar.hideProgressBar()
-                    processLogin(it.data)
+                    processLogin(it.mResult)
                 }
 
                 is BaseResponse.Error -> {
@@ -91,7 +92,7 @@ class LoginActivity : AppCompatActivity() {
         observerData()
     }
 
-    fun createAccountOnClick() {
+    fun createAccountOnClick(v:View) {
         startActivity(Intent(this, RegisterActivity::class.java))
     }
 
