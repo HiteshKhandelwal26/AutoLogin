@@ -20,3 +20,8 @@ Thus allowing the user to navigate to the dashboard screen directly when the app
 - Unit & Instrumentation test cases to be added.
 - Merge all code coverage reports at single place.
 - Reach code coverage atleast 80%.(TDD & BDD)
+
+![Logout](https://github.com/user-attachments/assets/423333a1-b8b6-46c7-9659-db43272889a2)
+![Dashboard](https://github.com/user-attachments/assets/44905b53-99f1-4a94-a98d-941c82d1ba4a)
+![Register](https://github.com/user-attachments/assets/7ed2b905-66aa-4895-8e8d-c71f3ed70fee)
+![Login](https://github.com/user-attachments/assets/11a87aee-6251-4bb1-a8d8-6b6b8fe16acc)
