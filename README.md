@@ -22,13 +22,13 @@ Thus allowing the user to navigate to the dashboard screen directly when the app
 - Reach code coverage atleast 80%.(TDD & BDD)
 
 Login Page
-![Login](https://github.com/user-attachments/assets/8dee9c8d-1eaa-4774-bc20-74fb71d22c05)
+![Login](https://github.com/user-attachments/assets/e82a7225-30b4-4008-a688-27c3ba191988)
 
 Register Page
-![Register](https://github.com/user-attachments/assets/7ed2b905-66aa-4895-8e8d-c71f3ed70fee)
+![Register](https://github.com/user-attachments/assets/34342b0f-4efc-4a39-b419-ad60d4525f32)
 
 Dashboard Page Post Login
-![Dashboard](https://github.com/user-attachments/assets/44905b53-99f1-4a94-a98d-941c82d1ba4a)
+![Dashboard](https://github.com/user-attachments/assets/00615f4b-be6f-4cb3-ad59-6ec5c82b1068)
 
 Logout option on Setting Page
-![Logout](https://github.com/user-attachments/assets/423333a1-b8b6-46c7-9659-db43272889a2)
+![Logout](https://github.com/user-attachments/assets/a8c4fcfd-8a9b-4f87-94ab-ce53a38a230c)
