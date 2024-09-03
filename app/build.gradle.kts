@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "com.mvvm.postquery"
+    namespace = "com.mvvm.autologin"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.mvvm.postquery"
+        applicationId = "com.mvvm.autologin"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

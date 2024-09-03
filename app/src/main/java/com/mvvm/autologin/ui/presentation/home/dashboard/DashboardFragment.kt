@@ -18,8 +18,8 @@ import com.mvvm.autologin.data.model.DataItem
 import com.mvvm.autologin.ui.utils.hideProgressBar
 import com.mvvm.autologin.ui.utils.showProgressBar
 import com.mvvm.autologin.ui.utils.showSnackbar
-import com.mvvm.postquery.R
-import com.mvvm.postquery.databinding.FragmentHomeBinding
+import com.mvvm.autologin.R
+import com.mvvm.autologin.databinding.FragmentHomeBinding
 import kotlinx.coroutines.launch
 
 class DashboardFragment : Fragment(), onAdapterItemClicked {

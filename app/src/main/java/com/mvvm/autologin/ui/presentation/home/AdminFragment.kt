@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.mvvm.postquery.databinding.FragmentAdminBinding
+import com.mvvm.autologin.databinding.FragmentAdminBinding
 
 
 class AdminFragment : Fragment() {

@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.mvvm.autologin.data.model.DataItem
-import com.mvvm.postquery.databinding.ItemLayoutDashboardBinding
+import com.mvvm.autologin.databinding.ItemLayoutDashboardBinding
 
 class DashboardListAdapter(onItemTapped: onAdapterItemClicked) :
     RecyclerView.Adapter<DashboardListAdapter.ViewHolder>() {

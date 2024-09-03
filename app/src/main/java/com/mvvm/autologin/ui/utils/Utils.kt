@@ -9,7 +9,7 @@ import android.view.View
 import androidx.fragment.app.FragmentActivity
 import com.google.android.material.snackbar.Snackbar
 import com.mvvm.autologin.data.SessionManager
-import com.mvvm.postquery.R
+import com.mvvm.autologin.R
 
 object Utils {
 

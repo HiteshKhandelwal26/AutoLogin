@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.mvvm.autologin.data.SessionManager
 import com.mvvm.autologin.ui.presentation.home.MainActivity
 import com.mvvm.autologin.ui.presentation.login.LoginActivity
-import com.mvvm.postquery.databinding.ActivitySplashBinding
+import com.mvvm.autologin.databinding.ActivitySplashBinding
 
 
 @Suppress("DEPRECATION")

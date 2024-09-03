@@ -15,8 +15,8 @@ import com.mvvm.autologin.ui.utils.showProgressBar
 import com.mvvm.autologin.ui.utils.showSnackbar
 import com.mvvm.autologin.ui.presentation.home.MainActivity
 import com.mvvm.autologin.ui.presentation.register.RegisterActivity
-import com.mvvm.postquery.R
-import com.mvvm.postquery.databinding.ActivityLoginBinding
+import com.mvvm.autologin.R
+import com.mvvm.autologin.databinding.ActivityLoginBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

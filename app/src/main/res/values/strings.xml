@@ -29,6 +29,7 @@
     <string name="logout_no">No</string>
     <string name="enter_email">Enter Email</string>
     <string name="enter_email_pwd">Enter email and password</string>
+    <string name="fill_all_details">Please fill all the details</string>
     <string name="enter_pwd">Enter Password</string>
     <string name="enter_valid_email">Enter valid email</string>
     <string name="enter_valid_password">Password must be >5 characters</string>
@@ -37,5 +38,8 @@
     <string name="wip">Work in progress</string>
     <string name="create_one">Create one</string>
     <string name="sign_in">Sign in</string>
+    <string name="successful_register">Account has been created successfully</string>
+    <string name="failed_register">Failed to create an account</string>
+    <string name="user_not_exist">User does not exists, please register</string>
 
 </resources>

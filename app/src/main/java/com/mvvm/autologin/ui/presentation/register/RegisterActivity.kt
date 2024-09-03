@@ -1,8 +1,9 @@
 package com.mvvm.autologin.ui.presentation.register
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.mvvm.postquery.databinding.ActivityRegisterBinding
+import com.mvvm.autologin.databinding.ActivityRegisterBinding
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -14,7 +15,7 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(binding.root)
     }
 
-    fun onCreate() {
+    fun onCreate(v: View) {
         finish()
     }
 }

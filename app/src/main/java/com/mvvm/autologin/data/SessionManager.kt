@@ -2,7 +2,7 @@ package com.mvvm.autologin.data
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.mvvm.postquery.R
+import com.mvvm.autologin.R
 
 object SessionManager {
     private var appContext: Context? = null

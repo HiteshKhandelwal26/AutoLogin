@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.mvvm.autologin.data.SessionManager
 import com.mvvm.autologin.ui.utils.Utils
-import com.mvvm.postquery.databinding.FragmentSettingBinding
+import com.mvvm.autologin.databinding.FragmentSettingBinding
 
 class SettingFragment : Fragment() {
     private var _binding: FragmentSettingBinding? = null
